@@ -1,0 +1,52 @@
+.head-ribbon{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:flex;
+    justify-content: space-between;
+    .logo{
+        position: absolute;
+        top: 49vh;
+        a{
+            text-decoration: none;
+        }
+        padding-top:1em;
+        strong{
+            color: rgb(88, 7, 155);
+        }
+        :hover{
+            cursor: pointer;
+        }
+        
+    }
+    .navigation{
+        display:flex;
+        font-size: 0.5em;
+        padding: 2em;
+    }
+    position: sticky; top: 0;
+}
+
+body{
+.bg-image{
+ position:absolute;
+ top:0;
+ left: 0;
+ background: url('../vimal-s-MV37Sp4gdxo-unsplash.jpg');
+ background-size:cover;
+ width: 100%;
+ height: 100%;
+ z-index: -1111;
+}
+.text{
+    padding: 100px;
+}
+.git-link{
+    position:absolute;
+    top: 10%;
+    left: 10%;
+    width: 50vw;
+    height: 50vh;
+    background: url('../Octocat.png');
+    background-size: 10vh;
+    background-repeat: no-repeat;
+}
+}

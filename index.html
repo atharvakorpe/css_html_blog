@@ -4,9 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur architecto magni libero voluptatum consequuntur iste odio eaque, fuga veniam ad excepturi nobis hic impedit. Dignissimos dolore voluptate nesciunt unde.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family='DynaPuff'&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
+    <title>Document</title>
 </head>
 <body>
-    
+   <div class="body-bg"></div>
+   <div class="body-fg"></div>
+   <button class="contact-me" id="contact-btn">FIND ME</button>
+   <p style="font-size: 2em;font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: bold;" class="name">
+   <span class="material-symbols-outlined">
+    menu
+    </span>
+    Atharva Korpe 
+    </p>
+    <div id="contact-box" class="contact">
+            <!-- contact content -->
+        <div class="contact-content">
+          <div class="contact-header">
+            <span class="material-symbols-outlined" id="close">
+                close
+                </span>
+            <h2>contact Header</h2>
+          </div>
+          <div class="contact-body">
+            <p>Hope you like this website</p>
+            <p>You can reach me through call and text at IST time</p>
+          </div>
+          <div class="contact-footer">
+            <h3>contact Footer</h3>
+          </div>
+        </div>
+      
+      </div>
+      
+   
 </body>
 </html>
+
+<style>
+    body{
+        margin:0px;
+    }
+     .body-bg {
+         position:absolute;
+         top:0;
+         left: 0;
+         background: url('../background.jpg');
+         background-size:cover;
+         width: 100%;
+         height: 100%;
+         z-index: -1111;
+        }
+        .body-fg{
+            position:absolute;
+            top:0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+        }
+        .contact-me{
+            position: absolute;
+            bottom: 5em;
+            margin: 0 50% 0 50%;
+            width: 5em;
+            font-family: 'DynaPuff', cursive;
+            
+        }
+        .material-symbols-outlined{
+            margin: 1em ;
+            
+        }
+        .name{
+           padding-right: 0.5em;
+           padding-left: 0.5em;
+            border-radius: 1em;
+            width: fit-content;
+            background-color: rgb(255, 255, 255);
+            color: rgb(56, 25, 4);
+        }
+
+       .contact{
+        
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            -webkit-animation-name: fadeIn; 
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s
+       }
+
+            .contact-content {
+            position: fixed;
+            bottom: 0;
+            background-color: #fefefe;
+            width: 100%;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s
+            }
+
+            #close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            }
+
+            #close:hover,
+            #close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            }
+
+            .contact-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+            }
+
+            .contact-body {padding: 2px 16px;}
+
+            .contact-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+            }
+
+                /* Add Animation */
+                @-webkit-keyframes slideIn {
+                from {bottom: -300px; opacity: 0} 
+                to {bottom: 0; opacity: 1}
+                }
+
+                @keyframes slideIn {
+                from {bottom: -300px; opacity: 0}
+                to {bottom: 0; opacity: 1}
+                }
+
+                @-webkit-keyframes fadeIn {
+                from {opacity: 0} 
+                to {opacity: 1}
+                }
+
+                @keyframes fadeIn {
+                from {opacity: 0} 
+                to {opacity: 1}
+                }
+
+</style>
+<script>
+    // Get the modal
+    var contact = document.getElementById("contact-box");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("contact-btn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsById("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      contact.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
