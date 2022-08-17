@@ -24,3 +24,10 @@
         con.style.display = "none";
       }
     }
+
+    function gmailid(){
+        let mail = "atharva.korpe@gmail.com";
+        navigator.clipboard.writeText(mail);
+        alert("Emai-ID copied to clipboard")
+
+    }

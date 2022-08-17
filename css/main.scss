@@ -2,6 +2,30 @@
     body{
         margin:0px;
     }
+   #menu{
+        padding:0px;
+        border-style: none;
+        background-color: transparent;
+      
+        
+    }
+    #menu:hover,
+    #menu:focus{
+
+        cursor: pointer;
+        
+    }
+    .launcher{
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+         border-radius: 1em;
+         width: 20vw;
+         height: 20vh;
+         background-color: rgba(0, 0, 0, 0.329);
+         color: rgb(255, 219, 217);
+         margin: 2em;
+
+    }
      .body-bg {
          position:absolute;
          top:0;
@@ -14,6 +38,7 @@
         }
         .body-fg{
             position:absolute;
+            z-index: -10;
             top:0;
             left: 0;
             background-color: rgba(0, 0, 0, 0.5);
@@ -22,7 +47,7 @@
         }
         .contact-me{
             position: absolute;
-            bottom: 5em;
+            bottom: 10vh;
             margin: 0 50% 0 50%;
             left:-3.5em;
             width: 7em;
@@ -41,18 +66,27 @@
            padding-left: 0.5em;
             border-radius: 1em;
             width: fit-content;
-            background-color: rgb(255, 255, 255);
-            color: rgb(56, 25, 4);
+            background-color: rgba(0, 0, 0, 0.329);
+            color: rgb(255, 219, 217);
+            margin: 1em;
         }
         .links{
             display: flex;
+            :hover{
+                cursor: pointer;
+            }
+            .links-icon
+            {:hover{
+                background-color:rgba(0, 0, 0, 0.295);
+                border-bottom: 5px solid red;
+            }}
         }
 
        .contact{
         
             display: none; 
             position: fixed; 
-            z-index: 1; 
+            z-index: 0; 
             left: 0;
             top: 0;
             width: 100%; 
@@ -68,15 +102,17 @@
 
             .contact-content {
             position: fixed;
-            bottom: 10%;
+            bottom: 10vh;
             background-color: #fefefe;
-            left:10%;
-            width: 80%;
+            left:10vw;
+            width: 80vw;
+            
             -webkit-animation-name: slideIn;
             -webkit-animation-duration: 0.4s;
             animation-name: slideIn;
             animation-duration: 0.4s
             }
+            
 
             .close {
             color: white;
@@ -103,18 +139,18 @@
             .contact-footer {
             padding: 2px 16px;
             background-color:#d16d45;
-            color: white;
+            color: rgba(255, 255, 255, 0);
             }
 
                 /* Add Animation */
                 @-webkit-keyframes slideIn {
-                from {bottom: -300px; opacity: 0} 
-                to {bottom: 0; opacity: 1}
+                from {width: 10%;opacity: 0 ;} 
+                to { opacity: 1}
                 }
 
                 @keyframes slideIn {
-                from {bottom: -300px; opacity: 0}
-                to {bottom: 0; opacity: 1}
+                    from {width: 10%;opacity: 0} 
+                    to {opacity: 1}
                 }
 
                 @-webkit-keyframes fadeIn {
@@ -126,4 +162,14 @@
                 from {opacity: 0} 
                 to {opacity: 1}
                 }
+
+                @-webkit-keyframes fadeout{
+                    from {opacity: 0} 
+                    to {opacity: 1}
+                }
+                @keyframes fadeout{
+                    from {opacity: 0} 
+                    to {opacity: 1}
+                    }
+    
 
