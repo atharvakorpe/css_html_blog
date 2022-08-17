@@ -24,9 +24,11 @@
             <!-- contact content -->
         <div class="contact-content">
           <div class="contact-header">
-            <span class="material-symbols-outlined" id="close">
+            <span class="close">
+              <span class="material-symbols-outlined" >
                 close
-                </span>
+              </span>
+            </span>
             <h2>contact Header</h2>
           </div>
           <div class="contact-body">
@@ -34,7 +36,23 @@
             <p>You can reach me through call and text at IST time</p>
           </div>
           <div class="contact-footer">
-            <h3>contact Footer</h3>
+            <h3 class="links">
+               <div class="link-icon" id="github">
+                <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+               </div>
+           
+               <div class="links-icon" id="linkedin" style="padding: 0 0 0 1em;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="32" height="32" focusable="false">
+                    <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+                  </svg>
+               </div>
+               <div class="links-icon" id="gmail" style="padding: 0 0 0 1em;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 193"><path fill="#4285F4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455h40.727Z"/><path fill="#34A853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798v98.91Z"/><path fill="#EA4335" d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"/><path fill="#FBBC04" d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945l-16.292 12.218Z"/><path fill="#C5221F" d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23v23.273Z"/>
+                 </svg>
+               </div>
+            </h3>
           </div>
         </div>
       
@@ -70,8 +88,12 @@
             position: absolute;
             bottom: 5em;
             margin: 0 50% 0 50%;
-            width: 5em;
+            left:-3.5em;
+            width: 7em;
             font-family: 'DynaPuff', cursive;
+            background-color: rgba(0, 0, 0, 0.0);
+            border: none;
+            
             
         }
         .material-symbols-outlined{
@@ -85,6 +107,9 @@
             width: fit-content;
             background-color: rgb(255, 255, 255);
             color: rgb(56, 25, 4);
+        }
+        .links{
+            display: flex;
         }
 
        .contact{
@@ -107,24 +132,25 @@
 
             .contact-content {
             position: fixed;
-            bottom: 0;
+            bottom: 10%;
             background-color: #fefefe;
-            width: 100%;
+            left:10%;
+            width: 80%;
             -webkit-animation-name: slideIn;
             -webkit-animation-duration: 0.4s;
             animation-name: slideIn;
             animation-duration: 0.4s
             }
 
-            #close {
+            .close {
             color: white;
             float: right;
             font-size: 28px;
             font-weight: bold;
             }
 
-            #close:hover,
-            #close:focus {
+            .close:hover,
+            .close:focus {
             color: #000;
             text-decoration: none;
             cursor: pointer;
@@ -132,7 +158,7 @@
 
             .contact-header {
             padding: 2px 16px;
-            background-color: #5cb85c;
+            background-color: #d16d45;
             color: white;
             }
 
@@ -140,7 +166,7 @@
 
             .contact-footer {
             padding: 2px 16px;
-            background-color: #5cb85c;
+            background-color:#d16d45;
             color: white;
             }
 
@@ -168,28 +194,28 @@
 </style>
 <script>
     // Get the modal
-    var contact = document.getElementById("contact-box");
+    var con = document.getElementById("contact-box");
     
     // Get the button that opens the modal
     var btn = document.getElementById("contact-btn");
     
     // Get the <span> element that closes the modal
-    var span = document.getElementsById("close")[0];
+        var span = document.getElementsByClassName("close")[0];
     
     // When the user clicks the button, open the modal 
     btn.onclick = function() {
-      contact.style.display = "block";
+      con.style.display = "block";
     }
     
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-      modal.style.display = "none";
+      con.style.display = "none";
     }
     
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+      if (event.target == con) {
+        con.style.display = "none";
       }
     }
     </script>
