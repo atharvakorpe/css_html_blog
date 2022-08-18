@@ -13,18 +13,6 @@ body {
   cursor: pointer;
 }
 
-.launcher {
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-  border-radius: 1em;
-  width: 20vw;
-  height: 20vh;
-  background-color: rgba(0, 0, 0, 0.329);
-  color: #ffdbd9;
-  margin: 2em;
-  display: none;
-}
-
 .body-bg {
   position: absolute;
   top: 0;
@@ -71,6 +59,28 @@ body {
   background-color: rgba(0, 0, 0, 0.329);
   color: #ffdbd9;
   margin: 1em;
+}
+
+.name .option {
+  background-color: rgba(0, 0, 0, 0.329);
+  margin: 3vh auto 3vh auto;
+  border-radius: 1em;
+  display: none;
+  padding: 0.5em;
+}
+
+.name .option #ecom {
+  margin: 0;
+  background-color: rgba(119, 34, 34, 0.295);
+  border-radius: 1em;
+}
+
+.name:hover {
+  height: 80vh;
+}
+
+.name:hover .option {
+  display: block;
 }
 
 .links {
