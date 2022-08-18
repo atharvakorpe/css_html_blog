@@ -106,6 +106,7 @@ body {
 }
 
 .contact-content {
+  border-radius: 1em;
   position: fixed;
   bottom: 10vh;
   background-color: #fefefe;
@@ -132,16 +133,19 @@ body {
 }
 
 .contact-header {
+  border-radius: 1em 1em 0 0;
   padding: 2px 16px;
   background-color: #d16d45;
   color: white;
 }
 
 .contact-body {
+  border-radius: 1em;
   padding: 2px 16px;
 }
 
 .contact-footer {
+  border-radius: 0 0 1em 1em;
   padding: 2px 16px;
   background-color: #d16d45;
   color: rgba(255, 255, 255, 0);
